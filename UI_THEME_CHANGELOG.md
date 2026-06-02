@@ -26,6 +26,7 @@
 - Inner page title banner.
 - Footer, footer columns, footer links, contact details, and copyright area.
 - Footer contact card email overflow fixed with long-text wrapping and a wider balanced footer grid.
+- Footer “Follow Us” social icon row hidden from the contact card.
 - Footer bottom/copyright strip corrected to remove the old teal band and stray white spacing.
 - Mobile/tablet refinements for spacing, navigation, hero images, cards, buttons, and tabs.
 
@@ -44,6 +45,7 @@
 - Modified CTA selectors: `.slider-btn`, `.blu-btn`, `.evetn-card a.evnt-btn`, `.evetn-card-page a.evnt-btn`, `.team-page a`, `.patnet-logo a`, `.award-card .btn`, `button.contact-btn`, `a.nav-btn`, `a.btn-6`, `.load-more .btn-6`, `.tab-btn`, and `.tab-btn.active`.
 - Modified footer selectors: `footer.same-section-spacing.footer-bg`, `footer.same-section-spacing.footer-bg::before`, `footer .footer-about`, `footer .usefull-links`, `footer .contact-us`, `footer h4.footer-title`, `footer .usefull-links ul li a`, `footer .contact-us a`, and `.copy-right`.
 - Modified footer layout selectors: `footer.same-section-spacing.footer-bg .row`, `footer.same-section-spacing.footer-bg .row > [class*="col-"]`, `footer .contact-us p`, `footer .contact-us li`, and `footer .contact-us a`.
+- Added `footer .contact-us ul.social-icons` hide rule.
 - Modified footer bottom selectors: `footer.same-section-spacing.footer-bg .copy-right`, `footer.same-section-spacing.footer-bg .copy-right::before`, `footer.same-section-spacing.footer-bg .copy-right p`, and `footer.same-section-spacing.footer-bg .copy-right-seprater`.
 - Modified responsive selectors in `css/responsive.css` for breakpoints at `1199px`, `992px`, `768px`, and `480px`.
 

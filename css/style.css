@@ -6728,6 +6728,10 @@ footer .contact-us p {
     line-height: 1.75;
 }
 
+footer .contact-us ul.social-icons {
+    display: none;
+}
+
 footer .usefull-links ul li a:hover,
 footer .contact-us a:hover {
     color: var(--accent-blue);
