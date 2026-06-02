@@ -1,0 +1,28 @@
+# OS junk files
+[Tt]humbs.db
+.DS_Store
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if applicable in future)
+node_modules/
+npm-debug.log
+
+# Log files
+*.log
+
+# Backup and Archive files
+*.zip
+*.tar.gz
+*.rar
+*.bak
+*.old
+*.tmp
+
+# Project specific backups
+backup*.zip
+old-index.html
