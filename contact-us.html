@@ -290,7 +290,9 @@
 
                   <h2>Drop us a line</h2>
 
-                  <form id="contactForm">
+                  <div id="contactStatus" class="alert" style="display: none;" role="alert"></div>
+
+                  <form id="contactForm" method="POST" action="send-contact.php">
 
                      <div class="row">
 
@@ -355,6 +357,12 @@
                               <div class="help-block with-errors"></div>
 
                            </div>
+
+                        </div>
+
+                        <div style="display: none;" aria-hidden="true">
+
+                           <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
 
                         </div>
 
@@ -628,6 +636,39 @@
    <!-- main.js -->
 
    <script src="js/main.js"></script>
+
+   <script>
+      (function () {
+         var params = new URLSearchParams(window.location.search);
+         var status = params.get('status');
+         var statusBox = document.getElementById('contactStatus');
+
+         if (!status || !statusBox) {
+            return;
+         }
+
+         var messages = {
+            success: {
+               text: 'Thank you. Your message has been sent successfully.',
+               className: 'alert alert-success'
+            },
+            error: {
+               text: 'Sorry, your message could not be sent. Please try again later.',
+               className: 'alert alert-danger'
+            },
+            invalid: {
+               text: 'Please fill all required fields correctly.',
+               className: 'alert alert-warning'
+            }
+         };
+
+         if (messages[status]) {
+            statusBox.textContent = messages[status].text;
+            statusBox.className = messages[status].className;
+            statusBox.style.display = 'block';
+         }
+      }());
+   </script>
 
 </body>
 

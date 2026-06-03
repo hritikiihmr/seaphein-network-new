@@ -1,0 +1,7 @@
+<Files "contact-mail-config.php">
+    Require all denied
+</Files>
+
+<FilesMatch "\.(log|bak|old|tmp)$">
+    Require all denied
+</FilesMatch>
