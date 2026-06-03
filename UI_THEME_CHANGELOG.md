@@ -5,6 +5,7 @@
 ### Files Changed
 - `css/style.css`
 - `css/responsive.css`
+- `mebmerinstutions.html`
 - `UI_THEME_CHANGELOG.md`
 
 ### Sections Updated
@@ -31,6 +32,7 @@
 - Leadership Team visible cards updated to match the compact horizontal profile-panel layout used on the home page.
 - Leadership Team intro and card sections spacing refined while keeping the current card UI unchanged.
 - Leadership Team intro and card sections now share one continuous light blue institutional background with no white band between sections.
+- Member Institutions page updated with a scoped premium table/card UI, active Team navigation state, desktop institution list panels, and mobile country cards.
 - Cards used by events, teams, member institutions, awards, media room, committee members, logos, contact panels, and footer columns.
 - Shared buttons and CTAs, including event buttons, slider buttons, blue buttons, tab buttons, contact submit button, award buttons, and load-more buttons.
 - Inner page title banner.
@@ -81,6 +83,7 @@
 - Leadership Team card spacing refined and Dr. P. R. Sodani card text/link aligned with the home page presentation.
 - Leadership Team page now uses one continuous light background across the intro and card area with reduced vertical gap.
 - Leadership Team card section background override added so the second section keeps the same page gradient treatment.
+- Member Institutions page now uses a polished deep-blue table header on desktop and stacked country cards on mobile while preserving all country names, institution names, and links.
 - Header and footer now use a deep-blue institutional treatment with a restrained gold accent line.
 - Copyright/footer bottom now uses the same deep-blue footer system with a small gold accent and no white band separating it from the footer.
 - Long email text in the footer contact card now wraps inside the card instead of overflowing.
@@ -91,9 +94,12 @@
 - `backups/ui-theme-20260602-113930/responsive.css.bak`
 - `backups/ui-theme-20260602-113930/UI_CHANGELOG.md.bak`
 - `backups/ui-theme-20260602-113930/UI_REFERENCE.md.bak`
+- `backups/member-institutions-theme-20260603-140631/mebmerinstutions.html.bak`
+- `backups/member-institutions-theme-20260603-140631/style.css.bak`
+- `backups/member-institutions-theme-20260603-140631/responsive.css.bak`
 
 ### How To Revert Changes
 1. Replace `css/style.css` with `backups/ui-theme-20260602-113930/style.css.bak`.
 2. Replace `css/responsive.css` with `backups/ui-theme-20260602-113930/responsive.css.bak`.
 3. Delete `UI_THEME_CHANGELOG.md` if you want to remove this theme-change record.
-4. No HTML rollback is required because this pass did not modify HTML files.
+4. To revert only the Member Institutions page update, replace `mebmerinstutions.html`, `css/style.css`, and `css/responsive.css` from `backups/member-institutions-theme-20260603-140631/`.
