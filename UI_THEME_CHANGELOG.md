@@ -5,6 +5,7 @@
 ### Files Changed
 - `css/style.css`
 - `css/responsive.css`
+- `mebmerinstutions.html`
 - `UI_THEME_CHANGELOG.md`
 
 ### Sections Updated
@@ -21,6 +22,17 @@
 - Home leadership profile section refined from oversized portrait cards into compact readable profile panels.
 - Executive Committee carousel cards refined for better portrait alignment, text hierarchy, button balance, and consistent card rhythm.
 - Executive Committee carousel button baselines aligned and Slick dot pseudo-overlap removed.
+- Executive Committee section converted from slider carousel to a static seven-member grid.
+- Executive Committee grid alignment refined with an even desktop 4/3 composition and mobile two-card rows with the final odd card centered.
+- Executive Committee grid container spacing refined so the cards have clear left/right breathing room on desktop and mobile.
+- Events page updated to match the current premium institutional theme, including tabs, event cards, image treatment, buttons, and section spacing.
+- Events page card images adjusted to show the complete event artwork instead of cropping banner text.
+- Webinar detail pages updated to match the current premium institutional theme across hero banners, metadata pills, speaker cards, badges, image panels, and back links.
+- Leadership Team page updated to match the current premium institutional theme and the Vice-President Dr. Baizid Khoorshid Riaz card was removed.
+- Leadership Team visible cards updated to match the compact horizontal profile-panel layout used on the home page.
+- Leadership Team intro and card sections spacing refined while keeping the current card UI unchanged.
+- Leadership Team intro and card sections now share one continuous light blue institutional background with no white band between sections.
+- Member Institutions page updated with a scoped premium table/card UI, active Team navigation state, desktop institution list panels, and mobile country cards.
 - Cards used by events, teams, member institutions, awards, media room, committee members, logos, contact panels, and footer columns.
 - Shared buttons and CTAs, including event buttons, slider buttons, blue buttons, tab buttons, contact submit button, award buttons, and load-more buttons.
 - Inner page title banner.
@@ -61,6 +73,17 @@
 - Leadership cards now use a tighter horizontal profile layout on desktop, left-aligned text, reduced empty space, smaller portraits, and a slim institutional accent.
 - Executive Committee cards now use consistent portrait sizing, cleaner flag badges, stronger readable body text, lighter outline CTAs, and tighter vertical spacing.
 - Executive Committee cards now use fixed internal rows for title, description, and CTA so buttons align consistently; default Slick dot pseudo-elements are suppressed.
+- Executive Committee “View Here” buttons removed and all seven member cards are visible at once with responsive 4/3, 3-column, 2-column, and single-column layouts.
+- Executive Committee mobile layout keeps two members per row where viewport width allows, then centers the seventh card for a cleaner finish.
+- Executive Committee section now resets row side gutters only within this card grid section and uses dedicated grid padding for consistent margins.
+- Events page inline styles now use the shared deep blue, light background, gold accent, soft shadow, rounded card, and pill-button theme.
+- Events page event-card images now use `object-fit: contain` with a light institutional background so full image text remains visible.
+- Webinar detail page inline teal accents replaced with the shared deep blue, gold accent, light background, rounded card, and soft shadow styling.
+- Leadership Team page now uses a scoped intro panel, two-card leadership grid, circular portraits, role badges, and themed pill buttons.
+- Leadership Team card spacing refined and Dr. P. R. Sodani card text/link aligned with the home page presentation.
+- Leadership Team page now uses one continuous light background across the intro and card area with reduced vertical gap.
+- Leadership Team card section background override added so the second section keeps the same page gradient treatment.
+- Member Institutions page now uses a polished deep-blue table header on desktop and stacked country cards on mobile while preserving all country names, institution names, and links.
 - Header and footer now use a deep-blue institutional treatment with a restrained gold accent line.
 - Copyright/footer bottom now uses the same deep-blue footer system with a small gold accent and no white band separating it from the footer.
 - Long email text in the footer contact card now wraps inside the card instead of overflowing.
@@ -71,9 +94,12 @@
 - `backups/ui-theme-20260602-113930/responsive.css.bak`
 - `backups/ui-theme-20260602-113930/UI_CHANGELOG.md.bak`
 - `backups/ui-theme-20260602-113930/UI_REFERENCE.md.bak`
+- `backups/member-institutions-theme-20260603-140631/mebmerinstutions.html.bak`
+- `backups/member-institutions-theme-20260603-140631/style.css.bak`
+- `backups/member-institutions-theme-20260603-140631/responsive.css.bak`
 
 ### How To Revert Changes
 1. Replace `css/style.css` with `backups/ui-theme-20260602-113930/style.css.bak`.
 2. Replace `css/responsive.css` with `backups/ui-theme-20260602-113930/responsive.css.bak`.
 3. Delete `UI_THEME_CHANGELOG.md` if you want to remove this theme-change record.
-4. No HTML rollback is required because this pass did not modify HTML files.
+4. To revert only the Member Institutions page update, replace `mebmerinstutions.html`, `css/style.css`, and `css/responsive.css` from `backups/member-institutions-theme-20260603-140631/`.

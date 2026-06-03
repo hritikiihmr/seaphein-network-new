@@ -146,7 +146,7 @@
 
                         <ul class="navbar-nav mr-auto text-center">
 
-                           <li class="nav-item active">
+                           <li class="nav-item">
 
                               <a class="nav-link scroll" href="index.html">Home</a>
 
@@ -158,7 +158,7 @@
 
                            </li>
 
-                           <li class="nav-item">
+                           <li class="nav-item active">
 
                               <a class="nav-link scroll" href="events.html">Events</a>
 
@@ -765,32 +765,39 @@
    </script>
 
    <style>
-      /* Tab Navigation Styles - Matching Website Theme */
+      /* Events page theme refinements */
       .tab-navigation-wrapper {
-         background: #f5f5f5;
-         padding: 0;
-         margin-bottom: 40px;
-         border-bottom: 2px solid #ddd;
+         background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+         padding: 26px 0 8px;
+         margin-bottom: 0;
+         border-bottom: 1px solid var(--border-light);
       }
 
       .tab-navigation {
          display: flex;
          justify-content: center;
-         gap: 0;
+         gap: 12px;
+         width: min(520px, 100%);
+         margin: 0 auto;
+         padding: 6px;
+         background: #ffffff;
+         border: 1px solid var(--border-light);
+         border-radius: 999px;
+         box-shadow: var(--shadow-soft);
       }
 
       .tab-btn {
          flex: 1;
-         max-width: 250px;
-         background: transparent;
-         border: none;
-         border-bottom: 3px solid transparent;
-         padding: 15px 30px;
-         color: #555;
-         font-size: 16px;
-         font-weight: 600;
+         max-width: none;
+         background: transparent !important;
+         border: 1px solid transparent !important;
+         border-radius: 999px;
+         padding: 13px 24px;
+         color: var(--primary-blue);
+         font-size: 15px;
+         font-weight: 800;
          cursor: pointer;
-         transition: all 0.3s ease;
+         transition: all 0.25s ease;
          position: relative;
          display: flex;
          align-items: center;
@@ -799,28 +806,29 @@
       }
 
       .tab-btn i {
-         font-size: 18px;
-         transition: transform 0.2s ease;
+         color: var(--link-blue);
+         font-size: 17px;
+         transition: transform 0.25s ease;
       }
 
       .tab-btn:hover {
-         background: #e8f4f8;
-         color: #0c5e7a;
+         background: var(--section-bg) !important;
+         color: var(--primary-blue-dark);
       }
 
       .tab-btn:hover i {
-         transform: scale(1.1);
+         transform: translateY(-1px);
       }
 
       .tab-btn.active {
-         background: #fff;
-         color: #0c5e7a;
-         border-bottom-color: #0c5e7a;
-         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+         background: var(--primary-blue) !important;
+         color: #ffffff !important;
+         border-color: var(--primary-blue) !important;
+         box-shadow: 0 12px 26px rgba(0, 45, 114, 0.2);
       }
 
       .tab-btn.active i {
-         color: #0c5e7a;
+         color: var(--gold-accent);
       }
 
       /* Tab Content Styles */
@@ -845,37 +853,21 @@
          }
       }
 
-      /* Responsive Design */
-      @media (max-width: 768px) {
-         .tab-navigation {
-            flex-direction: row;
-         }
-
-         .tab-btn {
-            max-width: 100%;
-            padding: 12px 20px;
-            font-size: 14px;
-         }
-
-         .tab-btn i {
-            font-size: 16px;
-         }
-      }
-
       /* Webinar Card Styles */
       .webinar-card-page {
          background: #fff;
-         border-radius: 8px;
+         border-radius: 16px;
          padding: 25px;
          margin-bottom: 30px;
-         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-         transition: all 0.3s ease;
-         border-left: 4px solid #0c5e7a;
+         box-shadow: var(--shadow-soft);
+         transition: all 0.25s ease;
+         border: 1px solid var(--border-light);
+         border-top: 4px solid var(--gold-accent);
       }
 
       .webinar-card-page:hover {
-         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-         transform: translateY(-3px);
+         box-shadow: var(--shadow-card);
+         transform: translateY(-4px);
       }
 
       .webinar-header {
@@ -888,7 +880,7 @@
       }
 
       .webinar-number {
-         background: #0c5e7a;
+         background: var(--primary-blue);
          color: #fff;
          font-size: 24px;
          font-weight: bold;
@@ -901,14 +893,14 @@
       }
 
       .webinar-header h3 {
-         color: #0c5e7a;
+         color: var(--primary-blue);
          font-size: 18px;
          margin: 0;
          font-weight: 600;
       }
 
       .webinar-card-page h4 {
-         color: #333;
+         color: var(--primary-blue);
          font-size: 20px;
          font-weight: 700;
          margin-bottom: 20px;
@@ -922,7 +914,7 @@
       }
 
       .webinar-details ul li {
-         color: #555;
+         color: var(--text-muted);
          font-size: 15px;
          margin-bottom: 8px;
          display: flex;
@@ -931,7 +923,7 @@
       }
 
       .webinar-details ul li i {
-         color: #0c5e7a;
+         color: var(--link-blue);
          font-size: 16px;
       }
 
@@ -944,7 +936,7 @@
 
       .webinar-speakers h5,
       .webinar-topics h5 {
-         color: #0c5e7a;
+         color: var(--primary-blue);
          font-size: 16px;
          font-weight: 600;
          margin-bottom: 10px;
@@ -958,7 +950,7 @@
 
       .webinar-speakers p,
       .webinar-topics p {
-         color: #666;
+         color: var(--text-muted);
          font-size: 14px;
          line-height: 1.8;
          margin-bottom: 0;
@@ -966,10 +958,10 @@
 
       .webinar-card-page .evnt-btn {
          margin-top: 20px;
-         background: #0c5e7a;
+         background: var(--primary-blue);
          color: #fff;
-         padding: 10px 25px;
-         border-radius: 5px;
+         padding: 11px 26px;
+         border-radius: 999px;
          text-decoration: none;
          display: inline-block;
          transition: all 0.3s ease;
@@ -977,109 +969,218 @@
       }
 
       .webinar-card-page .evnt-btn:hover {
-         background: #094a5e;
-         transform: translateX(5px);
+         background: var(--primary-blue-dark);
+         transform: translateY(-2px);
       }
 
-      /* Pro Frontend Card UI Upgrade */
+      section.committee-members {
+         padding: 54px 0 82px;
+         background:
+            linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+      }
+
+      section.committee-members .container {
+         max-width: 1180px;
+      }
+
+      section.committee-members .row.padding-20 {
+         row-gap: 28px;
+      }
+
+      section.committee-members .row.padding-20 > [class*="col-"] {
+         display: flex;
+      }
+
+      /* Premium event card UI */
       .evetn-card-page {
-         background: #fff !important;
+         background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
          padding: 0 !important;
-         min-height: 500px !important;
+         min-height: 440px !important;
          height: auto !important;
-         margin-bottom: 30px !important;
-         border-radius: 15px !important;
+         width: 100%;
+         margin-bottom: 0 !important;
+         border-radius: 16px !important;
          overflow: hidden !important;
-         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
-         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+         box-shadow: var(--shadow-soft) !important;
+         transition: all 0.25s ease !important;
          display: flex !important;
          flex-direction: column !important;
-         border: 1px solid rgba(0, 0, 0, 0.05) !important;
+         border: 1px solid rgba(0, 45, 114, 0.12) !important;
          position: relative;
       }
 
+      .evetn-card-page::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 18px;
+         left: 18px;
+         z-index: 2;
+         height: 4px;
+         border-radius: 0 0 999px 999px;
+         background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+      }
+
       .evetn-card-page:hover {
-         transform: translateY(-10px) !important;
-         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+         transform: translateY(-5px) !important;
+         border-color: rgba(0, 119, 216, 0.24) !important;
+         box-shadow: var(--shadow-card) !important;
       }
 
       .evetn-card-page .even-img {
          margin-bottom: 0px !important;
          width: 100% !important;
-         height: 200px !important;
+         height: 205px !important;
          overflow: hidden !important;
-         background: #f0f0f0;
+         background: linear-gradient(180deg, #ffffff 0%, var(--section-bg) 100%);
       }
 
       .evetn-card-page .even-img img {
          width: 100% !important;
          height: 100% !important;
-         object-fit: cover !important;
+         object-fit: contain !important;
          transition: transform 0.6s ease !important;
       }
 
       .evetn-card-page:hover .even-img img {
-         transform: scale(1.1) !important;
+         transform: scale(1.02) !important;
       }
 
       .evetn-card-page ul {
-         padding: 20px 20px 10px 20px !important;
+         padding: 20px 22px 10px !important;
          margin-bottom: 0 !important;
-         color: #0c5e7a !important;
-         font-size: 13px !important;
+         color: var(--link-blue) !important;
+         font-size: 12px !important;
          font-weight: 600 !important;
          height: auto !important;
          display: flex;
          align-items: center;
          gap: 8px;
-         text-transform: uppercase;
-         letter-spacing: 0.5px;
+         text-transform: none;
+         letter-spacing: 0;
       }
 
       .evetn-card-page ul li i {
-         color: #0c5e7a;
+         color: var(--link-blue);
       }
 
       .evetn-card-page h4 {
-         padding: 0 20px !important;
+         padding: 0 22px !important;
          font-size: 18px !important;
          margin-bottom: 15px !important;
          height: auto !important;
-         min-height: 60px !important;
+         min-height: 72px !important;
          overflow: visible !important;
-         line-height: 1.5 !important;
-         color: #1a1a1a !important;
+         line-height: 1.38 !important;
+         color: var(--primary-blue) !important;
+         font-family: 'Roboto Slab', Georgia, serif;
          font-weight: 700 !important;
          display: block !important;
       }
 
       .evetn-card-page a.evnt-btn {
-         background: #0c5e7a !important;
-         width: calc(100% - 40px) !important;
+         background: var(--primary-blue) !important;
+         width: calc(100% - 44px) !important;
          display: block !important;
          color: #fff !important;
          text-align: center !important;
-         padding: 12px !important;
-         margin: auto 20px 25px 20px !important;
-         border-radius: 8px !important;
-         font-weight: 600 !important;
-         transition: all 0.3s ease !important;
+         padding: 13px !important;
+         margin: auto 22px 24px !important;
+         border-radius: 999px !important;
+         font-weight: 800 !important;
+         transition: all 0.25s ease !important;
          text-transform: uppercase !important;
          font-size: 12px !important;
-         letter-spacing: 1px;
-         border: none !important;
-         box-shadow: 0 4px 10px rgba(12, 94, 122, 0.2);
+         letter-spacing: 0.04em;
+         border: 2px solid var(--primary-blue) !important;
+         box-shadow: 0 10px 24px rgba(0, 45, 114, 0.16);
       }
 
       .evetn-card-page a.evnt-btn:hover {
-         background: #084a61 !important;
-         box-shadow: 0 6px 15px rgba(12, 94, 122, 0.3);
+         background: var(--primary-blue-dark) !important;
+         border-color: var(--primary-blue-dark) !important;
+         box-shadow: 0 14px 28px rgba(0, 45, 114, 0.22);
          transform: translateY(-2px);
       }
 
       /* Clean grid spacing */
       .padding-20 {
-         padding: 20px 0;
+         padding: 0;
+      }
+
+      @media (max-width: 991px) {
+         section.committee-members {
+            padding: 44px 0 64px;
+         }
+
+         section.committee-members .row.padding-20 {
+            row-gap: 22px;
+         }
+
+         .evetn-card-page {
+            min-height: 420px !important;
+         }
+      }
+
+      @media (max-width: 768px) {
+         .tab-navigation-wrapper {
+            padding: 20px 0 4px;
+         }
+
+         .tab-navigation {
+            width: 100%;
+            gap: 6px;
+            border-radius: 18px;
+         }
+
+         .tab-btn {
+            min-height: 46px;
+            padding: 11px 14px;
+            font-size: 14px;
+         }
+
+         .tab-btn i {
+            font-size: 15px;
+         }
+
+         .evetn-card-page {
+            min-height: 0 !important;
+         }
+
+         .evetn-card-page .even-img {
+            height: 210px !important;
+         }
+      }
+
+      @media (max-width: 480px) {
+         section.committee-members {
+            padding: 34px 0 54px;
+         }
+
+         section.committee-members .row.padding-20 {
+            row-gap: 18px;
+         }
+
+         .evetn-card-page .even-img {
+            height: 190px !important;
+         }
+
+         .evetn-card-page h4 {
+            min-height: 0 !important;
+            font-size: 17px !important;
+         }
+
+         .evetn-card-page ul,
+         .evetn-card-page h4 {
+            padding-right: 18px !important;
+            padding-left: 18px !important;
+         }
+
+         .evetn-card-page a.evnt-btn {
+            width: calc(100% - 36px) !important;
+            margin-right: 18px !important;
+            margin-left: 18px !important;
+         }
       }
    </style>
 
