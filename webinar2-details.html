@@ -194,6 +194,206 @@
             text-transform: uppercase;
             margin-bottom: 8px;
         }
+
+        /* Current SEAPHEIN premium theme */
+        body {
+            background: var(--light-bg);
+        }
+
+        .webinar-hero {
+            background:
+                linear-gradient(120deg, rgba(0, 45, 114, 0.96), rgba(0, 119, 216, 0.78)),
+                url("images/event-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 76px 0 84px;
+            border-bottom: 4px solid var(--gold-accent);
+        }
+
+        .webinar-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(104, 172, 229, 0.28), transparent 30%),
+                linear-gradient(180deg, rgba(0, 31, 79, 0), rgba(0, 31, 79, 0.18));
+            pointer-events: none;
+        }
+
+        .webinar-hero::after {
+            right: -90px;
+            width: 360px;
+            height: 360px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .webinar-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .webinar-hero h1 {
+            max-width: 900px;
+            color: #ffffff;
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.22;
+            text-shadow: 0 12px 30px rgba(0, 31, 79, 0.28);
+        }
+
+        .webinar-series-badge,
+        .badge-role {
+            background: rgba(241, 196, 0, 0.16);
+            color: #ffffff;
+            border: 1px solid rgba(241, 196, 0, 0.55);
+            border-radius: 999px;
+            padding: 7px 16px;
+            margin-bottom: 20px;
+            letter-spacing: 0.08em;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 10px 24px rgba(0, 31, 79, 0.16);
+        }
+
+        .meta-item i {
+            color: var(--gold-accent);
+        }
+
+        .details-container {
+            padding-top: 56px;
+        }
+
+        .webinar-image-container {
+            border: 1px solid rgba(0, 45, 114, 0.12);
+            border-radius: 18px;
+            box-shadow: var(--shadow-card);
+            background: #ffffff;
+        }
+
+        .speaker-main-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+            border: 1px solid rgba(0, 45, 114, 0.12);
+            border-radius: 18px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .speaker-main-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 24px;
+            left: 24px;
+            height: 4px;
+            border-radius: 0 0 999px 999px;
+            background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+        }
+
+        .section-box-header i {
+            color: var(--link-blue);
+        }
+
+        .section-box-header h3 {
+            color: var(--primary-blue);
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .person-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(0, 45, 114, 0.06);
+        }
+
+        .person-card:hover {
+            border-left-color: var(--gold-accent);
+            box-shadow: var(--shadow-card);
+        }
+
+        .role-badge {
+            background: var(--section-bg);
+            color: var(--primary-blue);
+            border: 1px solid rgba(0, 119, 216, 0.18);
+            border-radius: 999px;
+        }
+
+        .person-name {
+            color: var(--primary-blue);
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .person-title {
+            color: var(--text-muted);
+        }
+
+        .back-link {
+            color: var(--primary-blue);
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 999px;
+            padding: 12px 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            transform: translateX(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .webinar-hero {
+                padding: 56px 0 62px;
+            }
+
+            .webinar-hero h1 {
+                max-width: 100%;
+                font-size: 1.78rem;
+                line-height: 1.26;
+                overflow-wrap: break-word;
+                word-break: normal;
+            }
+
+            .hero-meta {
+                gap: 10px;
+            }
+
+            .meta-item {
+                width: 100%;
+                align-items: flex-start;
+                border-radius: 14px;
+            }
+
+            .details-container {
+                padding-top: 34px;
+            }
+
+            .speaker-main-card {
+                padding: 26px 18px;
+            }
+
+            .section-box-header {
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .webinar-hero h1 {
+                font-size: 1.48rem;
+            }
+        }
     </style>
 </head>
 
@@ -278,8 +478,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <span class="badge-role"
-                        style="background: #4ecdc4; color: #084a61; padding: 6px 15px; margin-bottom: 20px;">SEAPHEIN
+                    <span class="badge-role webinar-series-badge">SEAPHEIN
                         Webinar Series #2</span>
                     <h1>Leadership in Public Health Education</h1>
                     <div class="hero-meta">
