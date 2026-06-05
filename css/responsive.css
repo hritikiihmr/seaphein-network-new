@@ -1942,3 +1942,32 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
         line-height: 1.48;
     }
 }
+
+/* Contact page responsive cleanup */
+@media (max-width: 991px) {
+    section.contact-us .row.padding-20 > .col-lg-8,
+    section.contact-us .row.padding-20 > .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 766px) {
+    section.contact-us .contact-form,
+    section.contact-us .contact-info {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    section.contact-us [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    section.contact-us .form-control {
+        width: 100%;
+        max-width: none;
+    }
+}
