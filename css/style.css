@@ -7409,6 +7409,17 @@ section.ws-section-spacing.patner-section:has(.executive-members-grid) .row {
     text-align: center;
 }
 
+.executive-members-grid .member-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
 .executive-members-grid .patnet-logo:nth-child(5) {
     grid-column: 3 / span 3;
 }
