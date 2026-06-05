@@ -307,7 +307,7 @@ section.ws-section-spacing.events {
 
     .executive-members-grid .member-linkedin {
         gap: 6px;
-        margin-top: 12px;
+        margin-top: auto;
         padding: 8px 10px;
         font-size: 11px;
     }

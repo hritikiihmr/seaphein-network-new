@@ -269,14 +269,18 @@
    <div class="tab-navigation-wrapper">
       <div class="container">
          <div class="tab-navigation">
-            <button class="tab-btn active" onclick="switchTab('events')">
+            <button class="tab-btn active" data-tab="events" onclick="switchTab('events', this)">
                <i class="fas fa-calendar-alt"></i>
                <span>Events</span>
             </button>
-            <button class="tab-btn" onclick="switchTab('webinars')">
+            <button class="tab-btn" data-tab="webinars" onclick="switchTab('webinars', this)">
                <i class="fas fa-video"></i>
                <span>Webinars</span>
             </button>
+            <a class="tab-btn" href="gallery.html">
+               <i class="fas fa-images"></i>
+               <span>Gallery</span>
+            </a>
          </div>
       </div>
    </div>
@@ -740,7 +744,7 @@
 
    <!-- Tab Switching Script -->
    <script>
-      function switchTab(tabName) {
+      function switchTab(tabName, clickedButton) {
          // Hide all tab contents
          const tabContents = document.querySelectorAll('.tab-content');
          tabContents.forEach(content => {
@@ -760,8 +764,18 @@
          }
 
          // Add active class to clicked button
-         event.target.closest('.tab-btn').classList.add('active');
+         const activeButton = clickedButton || document.querySelector('[data-tab="' + tabName + '"]');
+         if (activeButton) {
+            activeButton.classList.add('active');
+         }
       }
+
+      document.addEventListener('DOMContentLoaded', function () {
+         const initialTab = window.location.hash.replace('#', '');
+         if (initialTab === 'webinars') {
+            switchTab('webinars');
+         }
+      });
    </script>
 
    <style>
@@ -777,7 +791,7 @@
          display: flex;
          justify-content: center;
          gap: 12px;
-         width: min(520px, 100%);
+         width: min(720px, 100%);
          margin: 0 auto;
          padding: 6px;
          background: #ffffff;
@@ -803,6 +817,7 @@
          align-items: center;
          justify-content: center;
          gap: 10px;
+         text-decoration: none !important;
       }
 
       .tab-btn i {
