@@ -4417,6 +4417,847 @@ section.ws-section-spacing.about-us {
     border-color: #0e648c;
 }
 
+/* Awards overview */
+.awards-hero {
+    position: relative;
+    height: clamp(260px, 32vw, 430px);
+    overflow: hidden;
+    background: var(--primary-blue);
+    border-bottom: 4px solid var(--gold-accent);
+}
+
+.awards-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 31, 79, 0.02), rgba(0, 31, 79, 0.18));
+    pointer-events: none;
+}
+
+.awards-hero img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.Leadership-award.awards-overview {
+    padding: 72px 0 84px;
+    background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+}
+
+.awards-intro {
+    margin-bottom: 40px;
+}
+
+.awards-eyebrow,
+.award-category {
+    display: inline-block;
+    color: var(--link-blue);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.awards-eyebrow {
+    margin-bottom: 10px;
+}
+
+.awards-overview .section-title {
+    margin: 0;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.16;
+}
+
+.awards-overview .section-title::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 4px;
+    margin: 18px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.awards-overview .section-subtitle {
+    max-width: 760px;
+    margin: 18px auto 0;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.awards-grid {
+    align-items: stretch;
+    row-gap: 24px;
+}
+
+.awards-grid > [class*="col-"] {
+    display: flex;
+}
+
+.awards-overview .award-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+    padding: 0 24px 26px;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 16px 38px rgba(0, 45, 114, 0.1);
+}
+
+.awards-overview .award-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 22px auto;
+    z-index: 2;
+    height: 4px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.award-card-media {
+    height: 270px;
+    margin: 0 -24px 24px;
+    overflow: hidden;
+    padding: 12px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 45, 114, 0.09);
+}
+
+.awards-overview .award-card .award-card-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    object-fit: contain;
+}
+
+.award-card-content {
+    flex: 1;
+}
+
+.award-category {
+    margin-bottom: 9px;
+}
+
+.awards-overview .award-card h3 {
+    min-height: 56px;
+    margin: 0 0 12px;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.32;
+}
+
+.awards-overview .award-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.awards-overview .award-card .award-card-action {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 9px;
+    min-width: 154px;
+    margin-top: 22px;
+    padding: 11px 18px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.awards-overview .award-card .award-card-action i {
+    font-size: 11px;
+    transition: transform 0.2s ease;
+}
+
+.awards-overview .award-card .award-card-action:hover i {
+    transform: translateX(3px);
+}
+
+/* Lifetime achievement award detail */
+.Leadership-award.lifetime-award-page {
+    padding: 68px 0 84px;
+    background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+}
+
+.lifetime-award-heading {
+    max-width: 940px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.lifetime-award-eyebrow,
+.lifetime-section-label {
+    display: inline-block;
+    color: var(--link-blue);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.lifetime-award-heading h1 {
+    margin: 10px 0 0;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: clamp(2rem, 3.3vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1.18;
+}
+
+.lifetime-award-heading h1::after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.lifetime-award-heading > p {
+    max-width: 720px;
+    margin: 18px auto 0;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.lifetime-recipient {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 10px 18px 10px 10px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(0, 45, 114, 0.08);
+    text-align: left;
+}
+
+.lifetime-recipient-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    color: var(--primary-blue);
+    background: rgba(241, 196, 0, 0.2);
+    border-radius: 50%;
+}
+
+.lifetime-recipient small,
+.lifetime-recipient strong {
+    display: block;
+}
+
+.lifetime-recipient small {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.lifetime-recipient strong {
+    margin-top: 2px;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.lifetime-award-layout {
+    align-items: stretch;
+    row-gap: 28px;
+}
+
+.lifetime-award-layout > [class*="col-"] {
+    display: flex;
+    align-items: flex-start;
+}
+
+.lifetime-award-story,
+.lifetime-award-photo {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 18px 44px rgba(0, 45, 114, 0.1);
+}
+
+.lifetime-award-story {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 32px;
+}
+
+.lifetime-award-story::before,
+.lifetime-award-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0 24px auto;
+    z-index: 2;
+    height: 4px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.lifetime-award-story h2 {
+    margin: 10px 0 18px;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.28;
+}
+
+.lifetime-award-story p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.82;
+    text-align: left;
+}
+
+.lifetime-back-link {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 26px;
+    color: var(--primary-blue);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.lifetime-back-link:hover {
+    color: var(--link-blue);
+    transform: translateX(-3px);
+}
+
+.lifetime-award-photo {
+    display: flex;
+    flex-direction: column;
+}
+
+.lifetime-award-photo > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    object-position: center;
+}
+
+.lifetime-award-photo figcaption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    color: #ffffff;
+    background: var(--primary-blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.lifetime-photo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    color: var(--gold-accent);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.lifetime-award-photo figcaption strong,
+.lifetime-award-photo figcaption small {
+    display: block;
+}
+
+.lifetime-award-photo figcaption strong {
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.lifetime-award-photo figcaption small {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* Institutional public health award */
+.Leadership-award.institutional-award-page {
+    padding: 68px 0 84px;
+    background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+}
+
+.institutional-award-intro {
+    max-width: 980px;
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+.institutional-award-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--link-blue);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.institutional-award-intro h1 {
+    margin: 0;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: clamp(2rem, 3.2vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.18;
+}
+
+.institutional-award-intro h1::after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.institutional-award-intro > p {
+    max-width: 860px;
+    margin: 18px auto 0;
+    color: var(--text-muted);
+    font-size: 15.5px;
+    line-height: 1.78;
+    text-align: center;
+}
+
+.institutional-award-summary {
+    display: inline-grid;
+    grid-template-columns: 42px auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 24px;
+    padding: 10px 18px 10px 10px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(0, 45, 114, 0.08);
+    text-align: left;
+}
+
+.institutional-award-summary > span {
+    display: inline-flex;
+    grid-row: 1 / 3;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--primary-blue);
+    background: rgba(241, 196, 0, 0.2);
+    border-radius: 50%;
+}
+
+.institutional-award-summary strong {
+    color: var(--primary-blue);
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.institutional-award-summary small {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.25;
+}
+
+.institutional-award-page .row.public-health {
+    position: relative;
+    align-items: stretch;
+    row-gap: 20px;
+    margin: 0 0 28px;
+    padding: 28px 22px 24px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(0, 45, 114, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(0, 45, 114, 0.07);
+}
+
+.institutional-award-page .row.public-health::before {
+    content: "";
+    position: absolute;
+    inset: 0 24px auto;
+    height: 4px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.institutional-award-page .row.public-health > .col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.institutional-award-page .row.public-health h1 {
+    position: relative;
+    margin: 0;
+    padding: 0 0 14px;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.institutional-award-page .row.public-health h1::after {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: var(--gold-accent);
+}
+
+.institutional-award-page .row.public-health > [class*="col-"]:not(.col-lg-12) {
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.institutional-award-page .public-logos-box,
+.institutional-award-page .public-logos-boxbhutan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 230px;
+    height: auto;
+    margin: 0;
+    padding: 22px 18px 20px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.11);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0, 45, 114, 0.07);
+    transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.institutional-award-page .public-logos-box::before,
+.institutional-award-page .public-logos-boxbhutan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    height: 3px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.institutional-award-page .public-logos-box:hover,
+.institutional-award-page .public-logos-boxbhutan:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 119, 216, 0.24);
+    box-shadow: 0 16px 34px rgba(0, 45, 114, 0.12);
+}
+
+.institutional-award-page .public-logos-img,
+.institutional-award-page .public-logos-imgbhutan {
+    display: flex;
+    height: 112px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.institutional-award-page .public-logos-img a,
+.institutional-award-page .public-logos-imgbhutan a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.institutional-award-page .public-logos-box img,
+.institutional-award-page .public-logos-boxbhutan img {
+    display: block;
+    width: 100%;
+    max-width: 132px;
+    height: 104px;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.institutional-award-page .public-logos-content,
+.institutional-award-page .public-logos-contentbhutan {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.institutional-award-page .public-logos-content h2,
+.institutional-award-page .public-logos-contentbhutan h2 {
+    margin: 0;
+    padding: 0;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.institutional-award-footer {
+    margin-top: 38px;
+    text-align: center;
+}
+
+.institutional-award-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 19px;
+    color: var(--primary-blue);
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.14);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(0, 45, 114, 0.08);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.institutional-award-footer a:hover {
+    color: #ffffff;
+    background: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+/* Individual public health award */
+.individual-award-page .individual-award-intro {
+    max-width: 980px;
+    margin-bottom: 18px;
+    padding: 0 24px;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.individual-award-page .individual-award-intro::after {
+    content: none;
+}
+
+.individual-award-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--link-blue);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.individual-award-page .individual-award-intro h1 {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: clamp(2rem, 3.2vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.18;
+}
+
+.individual-award-page .individual-award-intro h1::after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.individual-award-page .individual-award-intro p {
+    max-width: 840px;
+    margin: 18px auto 0;
+    color: var(--text-muted);
+    font-size: 15.5px;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.individual-award-summary {
+    display: inline-grid;
+    grid-template-columns: 42px auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 24px;
+    padding: 10px 18px 10px 10px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(0, 45, 114, 0.08);
+    text-align: left;
+}
+
+.individual-award-summary > span {
+    display: inline-flex;
+    grid-row: 1 / 3;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--primary-blue);
+    background: rgba(241, 196, 0, 0.2);
+    border-radius: 50%;
+}
+
+.individual-award-summary strong {
+    color: var(--primary-blue);
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.individual-award-summary small {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.25;
+}
+
+.individual-award-page .row.padding-20:nth-of-type(2) {
+    margin-top: 34px;
+}
+
+.individual-award-page .award3rd-box {
+    min-height: 430px;
+    padding: 28px 20px 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid rgba(0, 45, 114, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 14px 32px rgba(0, 45, 114, 0.08);
+}
+
+.individual-award-page .award3rd-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    left: 20px;
+    height: 4px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
+.individual-award-page .award3rd-box::after {
+    content: none;
+}
+
+.individual-award-page .award3rd-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 6px;
+    border: 1px solid rgba(0, 45, 114, 0.1);
+    box-shadow: 0 14px 28px rgba(0, 45, 114, 0.13);
+}
+
+.individual-award-page .award3rd-img img {
+    object-fit: cover !important;
+    object-position: top center !important;
+}
+
+.individual-award-page .award3rd-inner h2 {
+    min-height: 49px;
+    margin-bottom: 8px;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.34;
+}
+
+.individual-award-page .award3rd-inner h3 {
+    min-height: 42px;
+    margin-bottom: 10px;
+    color: var(--primary-blue-dark);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.individual-award-page .award3rd-inner p {
+    margin-top: auto;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.58;
+    text-align: center;
+}
+
+.individual-award-footer {
+    margin-top: 42px;
+    text-align: center;
+}
+
+.individual-award-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 19px;
+    color: var(--primary-blue);
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.14);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(0, 45, 114, 0.08);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.individual-award-footer a:hover {
+    color: #ffffff;
+    background: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
 /* ----------------------------------------------------------------
    Premium UI refinement layer
 -----------------------------------------------------------------*/
@@ -6075,12 +6916,12 @@ section.committee-members .committee-members-data img {
 
 .individual-award-page .award3rd-img {
     display: flex;
-    width: 138px;
-    height: 138px;
+    width: 150px;
+    height: 150px;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 18px;
-    padding: 8px;
+    margin: 0 auto 20px;
+    padding: 6px;
     background: #ffffff;
     border: 1px solid rgba(14, 100, 140, 0.1);
     border-radius: 50%;
@@ -7056,30 +7897,88 @@ footer.same-section-spacing.footer-bg .copy-right p {
 
 /* Compact leadership profile panels */
 section.ws-section-spacing.about-us:has(.home-leadership-grid) {
-    padding: 58px 0 64px;
-    background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+    padding: 64px 0 70px;
+    scroll-margin-top: 96px;
+    background:
+        linear-gradient(180deg, #ffffff 0%, #f6f9fd 52%, var(--light-bg) 100%);
 }
 
 .home-leadership-grid {
     max-width: 1180px;
-    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.home-leadership-heading {
+    grid-column: 1 / -1;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto 14px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.home-leadership-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--link-blue);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.home-leadership-heading h2 {
+    margin: 0;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: clamp(2rem, 2.45vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.16;
+    text-wrap: balance;
+}
+
+.home-leadership-heading p {
+    max-width: 790px;
+    margin: 14px auto 0;
+    color: #4b5d72;
+    font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+    font-weight: 500;
+    line-height: 1.55;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.home-leadership-heading::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
 }
 
 .home-leadership-grid .row.single-about {
     position: relative;
-    display: grid;
-    grid-template-columns: 150px minmax(0, 1fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    height: auto;
     min-height: 0;
-    padding: 28px;
+    margin: 0;
+    padding: 26px 22px 24px;
     overflow: hidden;
-    text-align: left;
+    text-align: center;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 252, 0.94)),
         linear-gradient(90deg, rgba(104, 172, 229, 0.14), rgba(255, 255, 255, 0));
     border: 1px solid rgba(0, 45, 114, 0.12);
-    border-radius: 18px;
+    border-radius: 14px;
     box-shadow: 0 14px 34px rgba(0, 45, 114, 0.09);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .home-leadership-grid .row.single-about::before {
@@ -7092,6 +7991,30 @@ section.ws-section-spacing.about-us:has(.home-leadership-grid) {
     background: linear-gradient(180deg, var(--gold-accent), var(--accent-blue));
 }
 
+.leadership-country-flag {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 34px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 7px;
+    box-shadow: 0 8px 18px rgba(0, 45, 114, 0.12);
+}
+
+.leadership-country-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
 .home-leadership-grid .row.single-about:hover {
     transform: translateY(-3px);
     border-color: rgba(0, 119, 216, 0.24);
@@ -7099,68 +8022,167 @@ section.ws-section-spacing.about-us:has(.home-leadership-grid) {
 }
 
 .home-leadership-grid .row.single-about > [class*="col-"] {
-    width: auto;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     min-width: 0;
+    padding: 0;
 }
 
 .home-leadership-grid .about-img {
     display: flex;
-    justify-content: flex-start;
-    margin: 0;
+    justify-content: center;
+    margin: 0 0 16px;
 }
 
 .home-leadership-grid .about-img img {
-    width: 126px !important;
-    height: 126px;
+    width: 124px !important;
+    height: 124px;
+    object-fit: cover;
+    object-position: top center;
     border: 6px solid #ffffff;
+    border-radius: 50%;
     box-shadow: 0 14px 28px rgba(0, 45, 114, 0.13);
 }
 
 .home-leadership-grid .about-contetn {
-    align-items: flex-start;
-    justify-content: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
     min-width: 0;
     padding: 0;
 }
 
 .home-leadership-grid .about-contetn h3 {
-    margin: 0 0 6px;
+    min-height: 47px;
+    margin: 0 0 4px;
     color: var(--primary-blue);
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.18;
-    text-align: left;
+    text-align: center;
 }
 
 .home-leadership-grid .about-contetn h4 {
+    min-height: 36px;
     margin: 0;
     color: var(--primary-blue-dark);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.3;
-    text-align: left;
+    text-align: center;
 }
 
 .home-leadership-grid .saprater {
-    width: 52px;
+    width: 46px;
     height: 4px;
-    margin: 10px 0 14px;
+    margin: 8px auto 12px;
 }
 
 .home-leadership-grid .about-contetn p {
     max-width: 100%;
-    margin: 0 0 18px;
+    min-height: 40px;
+    margin: 0;
     color: var(--text-dark);
-    font-size: 15px;
-    line-height: 1.65;
-    text-align: left;
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: center;
 }
 
 .home-leadership-grid .slider-btn {
     margin-top: 0;
-    padding: 10px 22px;
-    font-size: 15px;
+    padding: 9px 18px;
+    font-size: 13px;
     line-height: 1.2;
+}
+
+.profile-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.home-linkedin-btn,
+.profile-linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    background: #0a66c2;
+    color: #ffffff !important;
+    font-weight: 800;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-linkedin-btn {
+    min-height: 36px;
+    padding: 9px 15px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.home-linkedin-btn:hover,
+.home-linkedin-btn:focus,
+.profile-linkedin-btn:hover,
+.profile-linkedin-btn:focus {
+    background: #084f96;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(10, 102, 194, 0.24);
+}
+
+.member-profile-page .profile-linkedin-btn {
+    width: max-content;
+    margin: 26px 0 0;
+    padding: 11px 20px;
+    font-size: 14px;
+}
+
+.member-profile-page .about-img.about-contetn {
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.member-profile-page .profile-country-flag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 48px;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 45, 114, 0.12);
+    border-radius: 8px;
+    box-shadow: 0 10px 22px rgba(0, 45, 114, 0.14);
+}
+
+section.about-us.member-profile-page .about-img.about-contetn > .profile-country-flag img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none;
+    max-height: none;
+    aspect-ratio: auto !important;
+    object-fit: cover;
+    object-position: top center;
+    border: 0 !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+}
+
+.member-profile-page .col-lg-4 + .col-lg-8 .about-contetn p {
+    text-align: left;
 }
 
 /* Executive committee carousel refinement */
@@ -7339,14 +8361,45 @@ section.ws-section-spacing.patner-section:has(.executive-members-grid) .row {
     margin-left: 0;
 }
 
+section#executive-committee {
+    scroll-margin-top: 96px;
+}
+
+section.ws-section-spacing.patner-section:has(.executive-members-grid) .patner-content {
+    width: 100%;
+    padding-bottom: 34px;
+    text-align: center;
+}
+
+section.ws-section-spacing.patner-section:has(.executive-members-grid) .patner-content h3.title {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--primary-blue);
+    font-family: 'Roboto Slab', Georgia, serif;
+    font-size: clamp(2rem, 2.55vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+section.ws-section-spacing.patner-section:has(.executive-members-grid) .patner-content .saprater-center {
+    width: 70px;
+    height: 4px;
+    margin: 22px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+}
+
 .executive-members-grid .patnet-logo {
     position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 100%;
     max-width: none;
-    min-height: 360px;
-    grid-template-rows: auto 1fr;
+    min-height: 430px;
     margin: 0;
     padding: 24px 22px 26px;
     overflow: hidden;
@@ -7407,10 +8460,12 @@ section.ws-section-spacing.patner-section:has(.executive-members-grid) .row {
 
 .executive-members-grid .patent-logo-inner {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100%;
+    width: 100%;
+    min-height: 0;
 }
 
 .executive-members-grid .patnet-logo h2 {
@@ -7426,7 +8481,7 @@ section.ws-section-spacing.patner-section:has(.executive-members-grid) .row {
 
 .executive-members-grid .patnet-logo p {
     max-width: 260px;
-    margin: 0 auto;
+    margin: 0 auto 24px;
     color: #374151;
     font-size: 13.5px;
     line-height: 1.62;
@@ -7434,13 +8489,18 @@ section.ws-section-spacing.patner-section:has(.executive-members-grid) .row {
 }
 
 .executive-members-grid .member-linkedin {
+    position: static !important;
+    inset: auto !important;
+    float: none !important;
     display: inline-flex;
+    flex: 0 0 auto;
     align-items: center;
     justify-content: center;
     gap: 8px;
     width: max-content;
     max-width: 100%;
-    margin-top: auto;
+    margin: auto auto 0;
+    transform: none;
     padding: 8px 14px;
     font-size: 12px;
     font-weight: 700;

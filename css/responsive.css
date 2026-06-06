@@ -263,6 +263,10 @@ section.ws-section-spacing.events {
 }
 
 @media (max-width: 768px) {
+    section#executive-committee {
+        scroll-margin-top: 82px;
+    }
+
     .executive-members-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
@@ -1209,39 +1213,110 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
     }
 }
 
-@media (max-width: 768px) {
-    section.ws-section-spacing.about-us:has(.home-leadership-grid) {
-        padding: 42px 0 48px;
-    }
-
+@media (min-width: 993px) and (max-width: 1199px) {
     .home-leadership-grid {
-        gap: 18px;
+        gap: 16px;
     }
 
     .home-leadership-grid .row.single-about {
-        grid-template-columns: 112px minmax(0, 1fr);
+        min-height: 0;
+        padding: 24px 16px 22px;
+    }
+
+    .home-leadership-grid .about-img img {
+        width: 112px !important;
+        height: 112px;
+        border-width: 5px;
+    }
+
+    .home-leadership-grid .about-contetn h3 {
+        font-size: 18px;
+    }
+
+    .home-leadership-grid .about-contetn p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.ws-section-spacing.about-us:has(.home-leadership-grid) {
+        padding: 62px 0 48px;
+        scroll-margin-top: 102px;
+    }
+
+    .home-leadership-grid {
+        width: calc(100% - 30px);
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 0;
+        padding-left: 0;
+        gap: 18px;
+    }
+
+    .home-leadership-heading {
+        padding: 0 12px;
+    }
+
+    .home-leadership-heading h2 {
+        font-size: 29px;
+        line-height: 1.18;
+    }
+
+    .home-leadership-heading p {
+        width: calc(100vw - 54px);
+        font-size: 15px;
+        line-height: 1.5;
+        overflow-wrap: break-word;
+    }
+
+    .home-leadership-grid .row.single-about {
+        flex-direction: column;
+        min-height: 0;
         padding: 22px 20px;
         border-radius: 16px;
     }
 
     .home-leadership-grid .about-img img {
-        width: 96px !important;
-        height: 96px;
+        width: 120px !important;
+        height: 120px;
         border-width: 5px;
     }
 
+    .home-leadership-grid .about-img {
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .leadership-country-flag {
+        top: 16px;
+        left: 16px;
+        width: 44px;
+        height: 32px;
+    }
+
+    .home-leadership-grid .about-contetn {
+        align-items: center;
+        text-align: center;
+    }
+
     .home-leadership-grid .about-contetn h3 {
+        min-height: 0;
         font-size: 21px;
+        text-align: center;
     }
 
     .home-leadership-grid .about-contetn h4 {
+        min-height: 0;
         font-size: 14px;
+        text-align: center;
     }
 
     .home-leadership-grid .about-contetn p {
+        min-height: 0;
         margin-bottom: 16px;
         font-size: 14px;
         line-height: 1.55;
+        text-align: center;
     }
 
     .home-leadership-grid .slider-btn {
@@ -1252,7 +1327,6 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
 
 @media (max-width: 520px) {
     .home-leadership-grid .row.single-about {
-        grid-template-columns: 1fr;
         justify-items: center;
         padding: 24px 20px;
         text-align: center;
@@ -1291,6 +1365,146 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
 }
 
 @media (max-width: 768px) {
+    .individual-award-page .individual-award-intro {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    .individual-award-page .individual-award-intro h1 {
+        font-size: 29px;
+    }
+
+    .individual-award-page .individual-award-intro p {
+        font-size: 14.5px;
+        line-height: 1.7;
+    }
+
+    .individual-award-page .award3rd-box {
+        min-height: 0;
+    }
+
+    .individual-award-page .award3rd-img {
+        width: 142px;
+        height: 142px;
+    }
+
+    .individual-award-page .award3rd-inner h2,
+    .individual-award-page .award3rd-inner h3 {
+        min-height: 0;
+    }
+
+    .Leadership-award.institutional-award-page {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    .institutional-award-intro {
+        margin-bottom: 34px;
+    }
+
+    .institutional-award-intro h1 {
+        font-size: 29px;
+    }
+
+    .institutional-award-intro > p {
+        font-size: 14.5px;
+        line-height: 1.7;
+    }
+
+    .institutional-award-page .row.public-health {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 24px 12px 18px;
+        border-radius: 16px;
+    }
+
+    .institutional-award-page .row.public-health h1 {
+        font-size: 23px;
+    }
+
+    .institutional-award-page .row.public-health > [class*="col-"]:not(.col-lg-12) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .institutional-award-page .public-logos-box,
+    .institutional-award-page .public-logos-boxbhutan {
+        min-height: 210px;
+    }
+
+    .Leadership-award.lifetime-award-page {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    .lifetime-award-heading {
+        margin-bottom: 32px;
+    }
+
+    .lifetime-award-heading h1 {
+        font-size: 29px;
+    }
+
+    .lifetime-award-heading > p {
+        font-size: 15px;
+    }
+
+    .lifetime-award-story {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .lifetime-award-story h2 {
+        font-size: 23px;
+    }
+
+    .lifetime-award-story p {
+        font-size: 14.5px;
+        line-height: 1.72;
+    }
+
+    .lifetime-back-link {
+        margin-top: 22px;
+        padding-top: 0;
+    }
+
+    .lifetime-award-photo {
+        border-radius: 16px;
+    }
+
+    .lifetime-award-photo > img {
+        min-height: 0;
+    }
+
+    .lifetime-award-photo figcaption {
+        padding: 14px 16px;
+    }
+
+    .awards-hero {
+        height: 240px;
+    }
+
+    .Leadership-award.awards-overview {
+        padding-top: 52px;
+        padding-bottom: 60px;
+    }
+
+    .awards-intro {
+        margin-bottom: 30px;
+    }
+
+    .awards-overview .award-card {
+        min-height: 0;
+    }
+
+    .award-card-media {
+        height: 250px;
+    }
+
+    .awards-overview .award-card h3 {
+        min-height: 0;
+    }
+
     .same-section-spacing,
     .ws-section-spacing,
     .section-spacing,

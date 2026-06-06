@@ -5,3 +5,10 @@
 <FilesMatch "\.(log|bak|old|tmp)$">
     Require all denied
 </FilesMatch>
+
+# Revalidate page markup so shared navigation updates appear immediately.
+<FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</FilesMatch>

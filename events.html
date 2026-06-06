@@ -166,14 +166,13 @@
 
                            <li class="nav-item">
 
-                              <a class="nav-link scroll" href="collaborationmembers.html">Collaboration
-                                 with Member Institutions</a>
+                              <a class="nav-link scroll" href="collaborationmembers.html">Collaboration</a>
 
                            </li>
 
                            <li class="nav-item">
 
-                              <a class="nav-link scroll" href="leadershipaward.html">Leadership Awards</a>
+                              <a class="nav-link scroll" href="leadershipaward.html">Awards</a>
 
 
 
@@ -209,7 +208,7 @@
 
                            <li class="nav-item">
 
-                              <a class="nav-link scroll" href="mediaroom.html">Media Room</a>
+                              <a class="nav-link scroll" href="gallery.html">Gallery</a>
 
                            </li>
 
@@ -277,10 +276,6 @@
                <i class="fas fa-video"></i>
                <span>Webinars</span>
             </button>
-            <a class="tab-btn" href="gallery.html">
-               <i class="fas fa-images"></i>
-               <span>Gallery</span>
-            </a>
          </div>
       </div>
    </div>
@@ -505,9 +500,9 @@
 
          <!-- Webinars Tab Content -->
          <div id="webinars-content" class="tab-content">
-            <div class="row padding-20">
+            <div class="row padding-20 webinars-grid">
                <!-- Webinar #2 -->
-               <div class="col-lg-3 col-md-3 col-sm-12">
+               <div class="col-lg-5 col-md-6 col-sm-12">
 
                   <div class="evetn-card-page">
 
@@ -531,7 +526,7 @@
 
                </div>
                <!-- Webinar #1 -->
-               <div class="col-lg-3 col-md-3 col-sm-12">
+               <div class="col-lg-5 col-md-6 col-sm-12">
 
                   <div class="evetn-card-page">
 
@@ -611,7 +606,7 @@
 
                      <!--<li><a href="#">Alliances with Member Institutions</a> </li>
 
-                            <li><a href="#">Leadership Awards</a> </li>
+                            <li><a href="#">Awards</a> </li>
 
                             <li><a href="#">Media Room</a> </li>-->
 
@@ -1118,6 +1113,35 @@
          transform: translateY(-2px);
       }
 
+      /* Center and enlarge only the two webinar cards. */
+      #webinars-content .webinars-grid {
+         justify-content: center;
+         max-width: 940px;
+         margin-right: auto;
+         margin-left: auto;
+         column-gap: 28px;
+      }
+
+      #webinars-content .webinars-grid > [class*="col-"] {
+         flex: 0 1 420px;
+         max-width: 420px;
+         padding-right: 0;
+         padding-left: 0;
+      }
+
+      #webinars-content .evetn-card-page {
+         min-height: 490px !important;
+      }
+
+      #webinars-content .evetn-card-page .even-img {
+         height: 255px !important;
+      }
+
+      #webinars-content .evetn-card-page h4 {
+         min-height: 58px !important;
+         font-size: 19px !important;
+      }
+
       /* Clean grid spacing */
       .padding-20 {
          padding: 0;
@@ -1134,6 +1158,16 @@
 
          .evetn-card-page {
             min-height: 420px !important;
+         }
+
+         #webinars-content .webinars-grid {
+            max-width: 760px;
+            column-gap: 20px;
+         }
+
+         #webinars-content .webinars-grid > [class*="col-"] {
+            flex-basis: calc(50% - 10px);
+            max-width: calc(50% - 10px);
          }
       }
 
@@ -1165,6 +1199,23 @@
          .evetn-card-page .even-img {
             height: 210px !important;
          }
+
+         #webinars-content .webinars-grid {
+            max-width: 520px;
+         }
+
+         #webinars-content .webinars-grid > [class*="col-"] {
+            flex-basis: 100%;
+            max-width: 100%;
+         }
+
+         #webinars-content .evetn-card-page {
+            min-height: 0 !important;
+         }
+
+         #webinars-content .evetn-card-page .even-img {
+            height: 260px !important;
+         }
       }
 
       @media (max-width: 480px) {
@@ -1178,6 +1229,10 @@
 
          .evetn-card-page .even-img {
             height: 190px !important;
+         }
+
+         #webinars-content .evetn-card-page .even-img {
+            height: 220px !important;
          }
 
          .evetn-card-page h4 {
