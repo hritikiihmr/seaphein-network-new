@@ -4596,7 +4596,7 @@ section.ws-section-spacing.about-us {
 
 /* Lifetime achievement award detail */
 .Leadership-award.lifetime-award-page {
-    padding: 68px 0 84px;
+    padding: 92px 0 84px;
     background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
 }
 
@@ -4818,7 +4818,7 @@ section.ws-section-spacing.about-us {
 
 /* Institutional public health award */
 .Leadership-award.institutional-award-page {
-    padding: 68px 0 84px;
+    padding: 92px 0 84px;
     background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
 }
 
@@ -5075,13 +5075,20 @@ section.ws-section-spacing.about-us {
 /* Individual public health award */
 .individual-award-page .individual-award-intro {
     max-width: 980px;
+    margin-right: auto;
     margin-bottom: 18px;
+    margin-left: auto;
     padding: 0 24px;
     overflow: visible;
+    text-align: center;
     background: transparent;
     border: 0;
     border-radius: 0;
     box-shadow: none;
+}
+
+.Leadership-award.individual-award-page {
+    padding-top: 92px;
 }
 
 .individual-award-page .individual-award-intro::after {

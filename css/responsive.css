@@ -1370,6 +1370,10 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
         padding: 0 8px;
     }
 
+    .Leadership-award.individual-award-page {
+        padding-top: 64px;
+    }
+
     .individual-award-page .individual-award-intro h1 {
         font-size: 29px;
     }
@@ -1394,7 +1398,7 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
     }
 
     .Leadership-award.institutional-award-page {
-        padding-top: 50px;
+        padding-top: 64px;
         padding-bottom: 60px;
     }
 
@@ -1433,7 +1437,7 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
     }
 
     .Leadership-award.lifetime-award-page {
-        padding-top: 50px;
+        padding-top: 64px;
         padding-bottom: 60px;
     }
 
