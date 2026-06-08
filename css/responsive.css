@@ -2326,10 +2326,7 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
     }
 
     section.member-institutions-page .styled-table tbody td:first-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
+        display: block;
         padding: 18px 16px 14px;
         background: #f8fbff;
         font-size: 22px;
@@ -2341,7 +2338,7 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
     }
 
     section.member-institutions-page .country-flag {
-        margin: 0;
+        margin: 0 auto 7px;
     }
 
     section.member-institutions-page .committee-members-data,
@@ -2447,7 +2444,7 @@ section.about-us:not(.ws-section-spacing) .col-lg-4 + .col-lg-8 .about-contetn h
     section.member-institutions-page .country-flag {
         width: 64px;
         height: 44px;
-        margin-bottom: 8px;
+        margin-bottom: 7px;
     }
 
     section.member-institutions-page .country-flag img {

@@ -9196,6 +9196,7 @@ section.member-institutions-page .styled-table tbody td:first-child {
     font-weight: 700;
     line-height: 1.35;
     text-align: center;
+    white-space: normal;
 }
 
 section.member-institutions-page .styled-table tbody td:first-child br {
@@ -9203,12 +9204,12 @@ section.member-institutions-page .styled-table tbody td:first-child br {
 }
 
 section.member-institutions-page .country-flag {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 70px;
     height: 48px;
-    margin: 0 auto 10px;
+    margin: 0 auto 8px;
     padding: 7px;
     background: #ffffff;
     border: 1px solid rgba(0, 119, 216, 0.18);
