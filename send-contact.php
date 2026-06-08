@@ -8,8 +8,35 @@ const CONTACT_SENDER_NAME = 'SEAPHEIN Website';
 const CONTACT_LOG_FILE = __DIR__ . '/contact-mail.log';
 const CONTACT_MAIL_CONFIG_FILE = __DIR__ . '/contact-mail-config.php';
 
-function redirect_with_status($status)
+function is_ajax_request()
 {
+    $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+    $requestedWith = $_SERVER['HTTP_X_REQUESTED_WITH'] ?? '';
+
+    return stripos($accept, 'application/json') !== false ||
+        strcasecmp($requestedWith, 'XMLHttpRequest') === 0;
+}
+
+function respond_with_status($status)
+{
+    if (is_ajax_request()) {
+        $messages = array(
+            'success' => 'Thank you. Your message has been sent successfully.',
+            'error' => 'Sorry, your message could not be sent. Please try again later.',
+            'invalid' => 'Please fill all required fields correctly.',
+        );
+        $httpStatus = $status === 'success' ? 200 : ($status === 'invalid' ? 422 : 500);
+
+        http_response_code($httpStatus);
+        header('Content-Type: application/json; charset=UTF-8');
+        echo json_encode(array(
+            'success' => $status === 'success',
+            'status' => $status,
+            'message' => $messages[$status] ?? $messages['error'],
+        ));
+        exit;
+    }
+
     header('Location: contact-us.html?status=' . rawurlencode($status));
     exit;
 }
@@ -170,11 +197,11 @@ function send_contact_mail_smtp($config, $subject, $body, $replyToEmail)
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    redirect_with_status('invalid');
+    respond_with_status('invalid');
 }
 
 if (!empty($_POST['website'])) {
-    redirect_with_status('success');
+    respond_with_status('success');
 }
 
 $name = clean_header_value($_POST['name'] ?? '');
@@ -193,7 +220,7 @@ if (
     !filter_var($email, FILTER_VALIDATE_EMAIL)
 ) {
     log_contact_mail_error('Invalid contact form submission. Name/email/subject/message validation failed.');
-    redirect_with_status('invalid');
+    respond_with_status('invalid');
 }
 
 $emailSubject = 'New Contact Form Submission - SEAPHEIN Network';
@@ -214,4 +241,4 @@ try {
     log_contact_mail_error($exception->getMessage());
 }
 
-redirect_with_status($sent ? 'success' : 'error');
+respond_with_status($sent ? 'success' : 'error');

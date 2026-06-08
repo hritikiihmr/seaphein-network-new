@@ -1,5 +1,36 @@
 # UI Changelog
 
+## 2026-06-08 13:35:00 +05:30
+
+### Files Changed
+- `membership.html`
+- Site header navigation in existing `.html` pages
+- `css/style.css`
+- `UI_CHANGELOG.md`
+
+### Short Reason For Change
+Add a new Membership page with a professional Coming Soon presentation and add a Membership menu item to the website header while preserving existing routes, content, scripts, and theme styling.
+
+### UI Improvements Done
+- Reuse the existing static inner-page structure, topbar, header, footer, scripts, and page-title banner.
+- Add a centered Coming Soon section with an icon, heading, supporting copy, subtle surface, rounded corners, and existing button style.
+- Add only scoped Membership page CSS using existing SEAPHEIN theme variables and breakpoints.
+- Add Membership as a top-level navigation item in a position aligned with the current information architecture.
+- Replaced the inherited image-based preloader with a CSS-only SEAPHEIN-themed blue/gold loader to avoid the generic loader image and remove the missing image request.
+
+### Backup File Path
+- `backups/membership-20260608-133500/style.css.bak`
+- `backups/membership-20260608-133500/UI_CHANGELOG.md.bak`
+- `backups/membership-20260608-133500/html/*.html`
+- `backups/membership-20260608-133500/screenshots/*.png`
+
+### Revert Instructions
+1. Delete `membership.html`.
+2. Remove the `Membership` list item linking to `membership.html` from page headers.
+3. Remove the `Membership page` CSS block from `css/style.css`.
+4. Restore the original `#preloader` background image rule if you want to bring back the previous image loader.
+5. Remove this changelog entry if reverting the documentation too.
+
 ## 2026-05-29 14:19:52 +05:30
 
 ### Files Changed
