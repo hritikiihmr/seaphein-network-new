@@ -108,6 +108,57 @@ Author:         Company Name
 });
 
 
+
+
+
+ $('.front-slider').slick({
+  slidesToShow: 1,
+  arrow:false,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1400,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1035,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+
+
 $('.one-time').slick({
   infinite: true,
   slidesToShow: 4,
