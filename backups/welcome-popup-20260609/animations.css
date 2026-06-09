@@ -431,13 +431,11 @@ body > header {
   z-index: 99990;
   display: grid;
   place-items: center;
-  padding: 28px;
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(0, 31, 79, 0.76), rgba(0, 58, 122, 0.66));
-  backdrop-filter: blur(3px) saturate(0.82);
+  padding: 24px;
+  background: rgba(0, 31, 79, 0.6);
+  backdrop-filter: blur(7px);
   opacity: 0;
-  transition: opacity 0.48s ease;
+  transition: opacity 0.38s ease;
 }
 
 .seaphein-welcome.is-visible {
@@ -451,100 +449,32 @@ body > header {
 
 .seaphein-welcome__dialog {
   position: relative;
-  z-index: 1;
   display: grid;
   justify-items: center;
-  gap: 18px;
-  width: min(760px, calc(100vw - 48px));
+  gap: 15px;
+  width: min(620px, calc(100vw - 36px));
   max-height: calc(100vh - 40px);
   overflow-y: auto;
-  padding: 52px 64px 44px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-top: 5px solid var(--motion-accent);
-  border-radius: 16px;
+  padding: 38px 44px 32px;
+  border: 1px solid rgba(104, 172, 229, 0.42);
+  border-top: 4px solid var(--motion-accent);
+  border-radius: 8px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(242, 248, 255, 0.94));
-  box-shadow:
-    0 42px 110px rgba(0, 31, 79, 0.42),
-    0 12px 34px rgba(0, 45, 114, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    linear-gradient(180deg, rgba(245, 250, 255, 0.98), rgba(255, 255, 255, 0.98));
+  box-shadow: 0 30px 80px rgba(0, 31, 79, 0.36);
   color: #24364c;
   text-align: center;
   opacity: 0;
-  transform: translate3d(0, -72px, 0) scale(0.94);
+  transform: translate3d(0, 24px, 0) scale(0.975);
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.48s var(--motion-ease),
+    transform 0.48s var(--motion-ease);
 }
 
 .seaphein-welcome.is-visible .seaphein-welcome__dialog {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
 }
-
-.seaphein-welcome.is-closing .seaphein-welcome__dialog {
-  opacity: 0;
-  transform: translate3d(0, -24px, 0) scale(0.97);
-  transition-duration: 0.28s;
-  transition-timing-function: ease;
-}
-
-.seaphein-welcome__celebration {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.seaphein-welcome__celebration i {
-  position: absolute;
-  top: -24px;
-  left: var(--confetti-left);
-  width: var(--confetti-width, 8px);
-  height: var(--confetti-height, 16px);
-  border-radius: 2px;
-  background: var(--confetti-color);
-  opacity: 0;
-  transform: translate3d(0, -20px, 0) rotate(0deg);
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__celebration i {
-  animation: seapheinWelcomeConfetti 2.4s ease-out var(--confetti-delay) both;
-}
-
-.seaphein-welcome__celebration i:nth-child(1) { --confetti-left: 8%; --confetti-delay: 0.08s; --confetti-color: #f1c400; }
-.seaphein-welcome__celebration i:nth-child(2) { --confetti-left: 14%; --confetti-delay: 0.26s; --confetti-color: #ffffff; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(3) { --confetti-left: 21%; --confetti-delay: 0.12s; --confetti-color: #68ace5; }
-.seaphein-welcome__celebration i:nth-child(4) { --confetti-left: 28%; --confetti-delay: 0.38s; --confetti-color: #f1c400; --confetti-height: 11px; }
-.seaphein-welcome__celebration i:nth-child(5) { --confetti-left: 35%; --confetti-delay: 0.2s; --confetti-color: #ffffff; }
-.seaphein-welcome__celebration i:nth-child(6) { --confetti-left: 42%; --confetti-delay: 0.44s; --confetti-color: #68ace5; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(7) { --confetti-left: 48%; --confetti-delay: 0.15s; --confetti-color: #f1c400; }
-.seaphein-welcome__celebration i:nth-child(8) { --confetti-left: 54%; --confetti-delay: 0.32s; --confetti-color: #ffffff; --confetti-height: 12px; }
-.seaphein-welcome__celebration i:nth-child(9) { --confetti-left: 60%; --confetti-delay: 0.1s; --confetti-color: #68ace5; }
-.seaphein-welcome__celebration i:nth-child(10) { --confetti-left: 66%; --confetti-delay: 0.4s; --confetti-color: #f1c400; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(11) { --confetti-left: 72%; --confetti-delay: 0.18s; --confetti-color: #ffffff; }
-.seaphein-welcome__celebration i:nth-child(12) { --confetti-left: 78%; --confetti-delay: 0.34s; --confetti-color: #68ace5; --confetti-height: 11px; }
-.seaphein-welcome__celebration i:nth-child(13) { --confetti-left: 84%; --confetti-delay: 0.14s; --confetti-color: #f1c400; }
-.seaphein-welcome__celebration i:nth-child(14) { --confetti-left: 91%; --confetti-delay: 0.3s; --confetti-color: #ffffff; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(15) { --confetti-left: 18%; --confetti-delay: 0.5s; --confetti-color: #68ace5; }
-.seaphein-welcome__celebration i:nth-child(16) { --confetti-left: 39%; --confetti-delay: 0.56s; --confetti-color: #f1c400; --confetti-height: 12px; }
-.seaphein-welcome__celebration i:nth-child(17) { --confetti-left: 63%; --confetti-delay: 0.52s; --confetti-color: #ffffff; }
-.seaphein-welcome__celebration i:nth-child(18) { --confetti-left: 87%; --confetti-delay: 0.58s; --confetti-color: #68ace5; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(19) { --confetti-left: 4%; --confetti-delay: 0.48s; --confetti-color: #ffffff; --confetti-height: 11px; }
-.seaphein-welcome__celebration i:nth-child(20) { --confetti-left: 11%; --confetti-delay: 0.64s; --confetti-color: #68ace5; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(21) { --confetti-left: 24%; --confetti-delay: 0.7s; --confetti-color: #f1c400; }
-.seaphein-welcome__celebration i:nth-child(22) { --confetti-left: 31%; --confetti-delay: 0.6s; --confetti-color: #ffffff; --confetti-height: 12px; }
-.seaphein-welcome__celebration i:nth-child(23) { --confetti-left: 46%; --confetti-delay: 0.76s; --confetti-color: #68ace5; }
-.seaphein-welcome__celebration i:nth-child(24) { --confetti-left: 51%; --confetti-delay: 0.62s; --confetti-color: #f1c400; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(25) { --confetti-left: 58%; --confetti-delay: 0.72s; --confetti-color: #ffffff; }
-.seaphein-welcome__celebration i:nth-child(26) { --confetti-left: 69%; --confetti-delay: 0.66s; --confetti-color: #68ace5; --confetti-height: 11px; }
-.seaphein-welcome__celebration i:nth-child(27) { --confetti-left: 75%; --confetti-delay: 0.8s; --confetti-color: #f1c400; }
-.seaphein-welcome__celebration i:nth-child(28) { --confetti-left: 81%; --confetti-delay: 0.68s; --confetti-color: #ffffff; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(29) { --confetti-left: 89%; --confetti-delay: 0.74s; --confetti-color: #68ace5; }
-.seaphein-welcome__celebration i:nth-child(30) { --confetti-left: 96%; --confetti-delay: 0.56s; --confetti-color: #f1c400; --confetti-height: 12px; }
-.seaphein-welcome__celebration i:nth-child(31) { --confetti-left: 37%; --confetti-delay: 0.86s; --confetti-color: #ffffff; --confetti-width: 6px; }
-.seaphein-welcome__celebration i:nth-child(32) { --confetti-left: 73%; --confetti-delay: 0.9s; --confetti-color: #68ace5; --confetti-height: 11px; }
 
 .seaphein-welcome__close {
   position: absolute;
@@ -584,16 +514,14 @@ body > header {
 .seaphein-welcome__seal {
   display: grid;
   place-items: center;
-  width: 108px;
+  width: 94px;
   aspect-ratio: 1;
   padding: 6px;
   border-radius: 50%;
   background: #ffffff;
   box-shadow:
-    0 18px 42px rgba(0, 45, 114, 0.2),
-    0 0 0 7px rgba(104, 172, 229, 0.12),
-    0 0 32px rgba(104, 172, 229, 0.28);
-  animation: seapheinWelcomeLogoFloat 3.6s ease-in-out infinite;
+    0 14px 34px rgba(0, 45, 114, 0.18),
+    0 0 0 6px rgba(104, 172, 229, 0.12);
 }
 
 .seaphein-welcome__seal img {
@@ -606,8 +534,8 @@ body > header {
 .seaphein-welcome__label {
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  padding: 0 15px;
+  min-height: 28px;
+  padding: 0 13px;
   border: 1px solid rgba(0, 119, 216, 0.2);
   border-radius: 999px;
   background: #eaf5ff;
@@ -622,14 +550,14 @@ body > header {
   margin: 0;
   color: var(--motion-primary);
   font-family: "Roboto Slab", Georgia, serif;
-  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: 0;
 }
 
 .seaphein-welcome__dialog p {
-  max-width: 570px;
+  max-width: 520px;
   margin: 0;
   color: #4b5d72;
   font-size: clamp(0.96rem, 1.5vw, 1.08rem);
@@ -642,63 +570,19 @@ body > header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 11px;
-  margin-top: 6px;
+  gap: 9px;
+  margin-top: 4px;
 }
 
 .seaphein-welcome__flags img {
-  width: 39px;
-  height: 39px;
-  padding: 5px;
+  width: 34px;
+  height: 34px;
+  padding: 4px;
   border: 1px solid rgba(0, 45, 114, 0.13);
   border-radius: 50%;
   background: #ffffff;
   object-fit: contain;
   box-shadow: 0 6px 16px rgba(0, 45, 114, 0.1);
-  opacity: 0;
-  transform: translate3d(0, 12px, 0) scale(0.78);
-  transition:
-    transform 0.25s var(--motion-ease),
-    box-shadow 0.25s ease;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img {
-  animation: seapheinWelcomeFlagIn 0.55s var(--motion-ease) both;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(1) {
-  animation-delay: 0.38s;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(2) {
-  animation-delay: 0.45s;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(3) {
-  animation-delay: 0.52s;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(4) {
-  animation-delay: 0.59s;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(5) {
-  animation-delay: 0.66s;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(6) {
-  animation-delay: 0.73s;
-}
-
-.seaphein-welcome.is-visible .seaphein-welcome__flags img:nth-child(7) {
-  animation-delay: 0.8s;
-}
-
-.seaphein-welcome__flags img:hover {
-  animation: none !important;
-  opacity: 1;
-  transform: translate3d(0, -5px, 0) scale(1.08);
-  box-shadow: 0 12px 24px rgba(0, 45, 114, 0.18);
 }
 
 .seaphein-welcome__hint {
@@ -941,37 +825,6 @@ a.btn-6:hover i {
   }
 }
 
-@keyframes seapheinWelcomeLogoFloat {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -7px, 0);
-  }
-}
-
-@keyframes seapheinWelcomeFlagIn {
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-}
-
-@keyframes seapheinWelcomeConfetti {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -20px, 0) rotate(0deg);
-  }
-  12% {
-    opacity: 0.92;
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(var(--confetti-drift, 24px), 72vh, 0) rotate(420deg);
-  }
-}
-
 @keyframes seapheinCurtainLeft {
   to {
     transform: translateX(-101%);
@@ -1061,12 +914,12 @@ a.btn-6:hover i {
 
   .seaphein-welcome__dialog {
     gap: 13px;
-    width: 92vw;
-    padding: 40px 24px 32px;
+    width: min(350px, calc(100vw - 24px));
+    padding: 32px 18px 26px;
   }
 
   .seaphein-welcome__seal {
-    width: 86px;
+    width: 78px;
   }
 
   .seaphein-welcome__dialog h2 {
@@ -1084,8 +937,8 @@ a.btn-6:hover i {
   }
 
   .seaphein-welcome__flags img {
-    width: 33px;
-    height: 33px;
+    width: 31px;
+    height: 31px;
   }
 }
 
@@ -1143,9 +996,6 @@ a.btn-6:hover i {
   .seaphein-welcome,
   .seaphein-welcome__dialog,
   .seaphein-welcome__close,
-  .seaphein-welcome__seal,
-  .seaphein-welcome__flags img,
-  .seaphein-welcome__celebration i,
   .about-img img,
   .patent-logo-img img,
   .even-img img,
@@ -1153,19 +1003,6 @@ a.btn-6:hover i {
   .award-card img {
     animation: none !important;
     transform: none !important;
-  }
-
-  .seaphein-welcome {
-    opacity: 1;
-  }
-
-  .seaphein-welcome__dialog,
-  .seaphein-welcome__flags img {
-    opacity: 1 !important;
-  }
-
-  .seaphein-welcome__celebration {
-    display: none !important;
   }
 
   .navbar-light .navbar-nav .nav-item .dropdown {

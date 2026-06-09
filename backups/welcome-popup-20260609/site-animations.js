@@ -2,7 +2,6 @@
   "use strict";
 
   var introKey = "seapheinIntroSeen";
-  // Development reset: sessionStorage.removeItem("seapheinIntroSeen");
   var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var shouldShowIntro = false;
 
@@ -63,14 +62,8 @@
     modal.setAttribute("aria-modal", "true");
     modal.setAttribute("aria-labelledby", "seaphein-welcome-title");
     modal.innerHTML = [
-      '<div class="seaphein-welcome__celebration" aria-hidden="true">',
-      '<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>',
-      '<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>',
-      '<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>',
-      '<i></i><i></i><i></i><i></i><i></i>',
-      '</div>',
       '<div class="seaphein-welcome__dialog">',
-      '<button class="seaphein-welcome__close" type="button" aria-label="Close welcome popup">&times;</button>',
+      '<button class="seaphein-welcome__close" type="button" aria-label="Close welcome message">&times;</button>',
       '<div class="seaphein-welcome__seal"><img src="images/seapheinlogo.jpeg" alt="SEAPHEIN logo"></div>',
       '<span class="seaphein-welcome__label">The official website is now live</span>',
       '<h2 id="seaphein-welcome-title">Welcome to SEAPHEIN</h2>',
