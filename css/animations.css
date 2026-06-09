@@ -15,6 +15,11 @@ html.seaphein-intro-lock body {
   overflow: hidden;
 }
 
+body > header {
+  position: relative;
+  z-index: 1100;
+}
+
 .seaphein-intro {
   position: fixed;
   inset: 0;
@@ -244,13 +249,12 @@ html.seaphein-intro-lock body {
   transition: opacity 0.28s ease;
 }
 
-body.seaphein-page-ready header,
 body.seaphein-page-ready .main-div {
   animation: seapheinPageReveal 0.75s var(--motion-ease) both;
 }
 
 body.seaphein-page-ready header {
-  animation-duration: 0.55s;
+  animation: none;
 }
 
 .seaphein-reveal {
