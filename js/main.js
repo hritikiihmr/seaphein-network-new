@@ -17,6 +17,24 @@ Author:         Company Name
 (function ($) {
   "use strict";
   var $main_window = $(window);
+
+  /*====================================
+      events dropdown
+    ======================================*/
+  $('.navbar-nav > .nav-item > a[href="events.html"]').each(function () {
+    var $eventsLink = $(this);
+    var $eventsItem = $eventsLink.parent('.nav-item');
+
+    if (!$eventsItem.children('.dropdown').length) {
+      $eventsItem.append(
+        '<ul class="dropdown">' +
+          '<li class="nav-item"><a class="nav-link scroll" href="events.html">Annual Meeting</a></li>' +
+          '<li class="nav-item"><a class="nav-link scroll" href="webinars.html">Webinars</a></li>' +
+        '</ul>'
+      );
+    }
+  });
+
   /*====================================
       preloader js
     ======================================*/
