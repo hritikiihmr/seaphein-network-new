@@ -19,6 +19,23 @@ Author:         Company Name
   var $main_window = $(window);
 
   /*====================================
+      about us dropdown
+    ======================================*/
+  $('.navbar-nav > .nav-item > a[href="about-us.html"]').each(function () {
+    var $aboutLink = $(this);
+    var $aboutItem = $aboutLink.parent('.nav-item');
+
+    if (!$aboutItem.children('.dropdown').length) {
+      $aboutItem.append(
+        '<ul class="dropdown">' +
+          '<li class="nav-item"><a class="nav-link scroll" href="about-us.html">SEAPHEIN</a></li>' +
+          '<li class="nav-item"><a class="nav-link scroll" href="country-specific-network.html">Country Specific Network</a></li>' +
+        '</ul>'
+      );
+    }
+  });
+
+  /*====================================
       events dropdown
     ======================================*/
   $('.navbar-nav > .nav-item > a[href="events.html"]').each(function () {
