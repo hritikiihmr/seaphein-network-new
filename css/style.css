@@ -311,11 +311,20 @@ select{
   justify-content: center;
 
   overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 220ms ease, visibility 220ms ease;
 
   background:
     radial-gradient(circle at 50% 46%, rgba(104, 172, 229, 0.16), transparent 26%),
     linear-gradient(135deg, #ffffff 0%, #f3f9ff 48%, #e9f5fc 100%);
 
+}
+
+#preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 #preloader::before {

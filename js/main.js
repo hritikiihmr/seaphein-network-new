@@ -38,9 +38,21 @@ Author:         Company Name
   /*====================================
       preloader js
     ======================================*/
-  $main_window.on('load', function () {
-    $('#preloader').fadeOut('slow');
-  });
+  var $preloader = $('#preloader');
+  var hidePreloader = function () {
+    if (!$preloader.length || $preloader.hasClass('is-hidden')) {
+      return;
+    }
+
+    $preloader.addClass('is-hidden');
+    window.setTimeout(function () {
+      $preloader.hide();
+    }, 240);
+  };
+
+  hidePreloader();
+  $main_window.on('load', hidePreloader);
+  window.setTimeout(hidePreloader, 1200);
 
   /*====================================
       active menu js
