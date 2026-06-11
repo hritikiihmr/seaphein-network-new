@@ -283,6 +283,18 @@
                <div class="col-lg-5 col-md-6 col-sm-12">
                   <div class="evetn-card-page">
                      <div class="even-img">
+                        <img src="images/webinar3.webp" alt="Implementation Research in Public Health webinar">
+                     </div>
+                     <ul>
+                        <li><i></i> Friday, June 12, 2026</li>
+                     </ul>
+                     <h4>Implementation Research in Public Health: From Capacity Building to Impact</h4>
+                     <a href="webinar3-details.html" class="evnt-btn">Read More</a>
+                  </div>
+               </div>
+               <div class="col-lg-5 col-md-6 col-sm-12">
+                  <div class="evetn-card-page">
+                     <div class="even-img">
                         <img src="images/webinar2.jpg" alt="Leadership in Public Health Education webinar">
                      </div>
                      <ul>
@@ -829,18 +841,18 @@
          transform: translateY(-2px);
       }
 
-      /* Center and enlarge only the two webinar cards. */
+      /* Center and enlarge the webinar cards. */
       #webinars-content .webinars-grid {
          justify-content: center;
-         max-width: 940px;
+         max-width: 1180px;
          margin-right: auto;
          margin-left: auto;
-         column-gap: 28px;
+         column-gap: 24px;
       }
 
       #webinars-content .webinars-grid > [class*="col-"] {
-         flex: 0 1 420px;
-         max-width: 420px;
+         flex: 0 1 calc(33.333% - 16px);
+         max-width: calc(33.333% - 16px);
          padding-right: 0;
          padding-left: 0;
       }
@@ -850,7 +862,7 @@
       }
 
       #webinars-content .evetn-card-page .even-img {
-         height: 255px !important;
+         height: 220px !important;
       }
 
       #webinars-content .evetn-card-page h4 {

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SEAPHEIN Webinar #3 - Implementation Research in Public Health</title>
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--animate.css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--fontawesome 5-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--slicknav.css-->
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <!--slickslider.css-->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- lity.css -->
+    <link rel="stylesheet" href="css/lity.min.css">
+    <!-- flaticon.css -->
+    <link rel="stylesheet" href="fonts/flaticon.css">
+    <!--Fav-icon-->
+    <link rel="shortcut icon" href="images/seapheinlogo.jpeg" type="image/x-icon">
+    <!-- Custom.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+   <link rel="stylesheet" href="css/animations.css?v=20260609-3">
+
+    <style>
+        .webinar-hero {
+            background: linear-gradient(135deg, #0c5e7a 0%, #084a61 100%);
+            padding: 50px 0;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            clear: both;
+            /* Fix for the white space clearing issue */
+        }
+
+        .webinar-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(150px, -150px);
+        }
+
+        .webinar-hero h1 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        .meta-item i {
+            color: #4ecdc4;
+            font-size: 16px;
+        }
+
+        /* New UI Styles */
+        .section-box-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-box-header i {
+            font-size: 24px;
+            color: #0c5e7a;
+        }
+
+        .section-box-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .speaker-main-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            height: 100%;
+        }
+
+        .person-card {
+            background: #fafafa;
+            /* Very light grey */
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #0c5e7a;
+            position: relative;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #eee;
+        }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .role-badge {
+            background: #e0f2f1;
+            color: #00796b;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .person-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .person-title {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .webinar-image-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            margin-top: 30px;
+        }
+
+        .webinar-image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #0c5e7a;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #084a61;
+            transform: translateX(-5px);
+        }
+
+        .badge-role {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #e0f2f1;
+            color: #00796b;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        /* Current SEAPHEIN premium theme */
+        body {
+            background: var(--light-bg);
+        }
+
+        .webinar-hero {
+            background:
+                linear-gradient(120deg, rgba(0, 45, 114, 0.96), rgba(0, 119, 216, 0.78)),
+                url("images/event-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 76px 0 84px;
+            border-bottom: 4px solid var(--gold-accent);
+        }
+
+        .webinar-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(104, 172, 229, 0.28), transparent 30%),
+                linear-gradient(180deg, rgba(0, 31, 79, 0), rgba(0, 31, 79, 0.18));
+            pointer-events: none;
+        }
+
+        .webinar-hero::after {
+            right: -90px;
+            width: 360px;
+            height: 360px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .webinar-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .webinar-hero h1 {
+            max-width: 900px;
+            color: #ffffff;
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.22;
+            text-shadow: 0 12px 30px rgba(0, 31, 79, 0.28);
+        }
+
+        .webinar-series-badge,
+        .badge-role {
+            background: rgba(241, 196, 0, 0.16);
+            color: #ffffff;
+            border: 1px solid rgba(241, 196, 0, 0.55);
+            border-radius: 999px;
+            padding: 7px 16px;
+            margin-bottom: 20px;
+            letter-spacing: 0.08em;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 10px 24px rgba(0, 31, 79, 0.16);
+        }
+
+        .meta-item i {
+            color: var(--gold-accent);
+        }
+
+        .details-container {
+            padding-top: 56px;
+        }
+
+        .webinar-image-container {
+            border: 1px solid rgba(0, 45, 114, 0.12);
+            border-radius: 18px;
+            box-shadow: var(--shadow-card);
+            background: #ffffff;
+        }
+
+        .speaker-main-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+            border: 1px solid rgba(0, 45, 114, 0.12);
+            border-radius: 18px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .speaker-main-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 24px;
+            left: 24px;
+            height: 4px;
+            border-radius: 0 0 999px 999px;
+            background: linear-gradient(90deg, var(--gold-accent), var(--accent-blue));
+        }
+
+        .section-box-header i {
+            color: var(--link-blue);
+        }
+
+        .section-box-header h3 {
+            color: var(--primary-blue);
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .person-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(0, 45, 114, 0.06);
+        }
+
+        .person-card:hover {
+            border-left-color: var(--gold-accent);
+            box-shadow: var(--shadow-card);
+        }
+
+        .role-badge {
+            background: var(--section-bg);
+            color: var(--primary-blue);
+            border: 1px solid rgba(0, 119, 216, 0.18);
+            border-radius: 999px;
+        }
+
+        .person-name {
+            color: var(--primary-blue);
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .person-title {
+            color: var(--text-muted);
+        }
+
+        .back-link {
+            color: var(--primary-blue);
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 999px;
+            padding: 12px 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            transform: translateX(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .webinar-hero {
+                padding: 56px 0 62px;
+            }
+
+            .webinar-hero h1 {
+                max-width: 100%;
+                font-size: 1.78rem;
+                line-height: 1.26;
+                overflow-wrap: break-word;
+                word-break: normal;
+            }
+
+            .hero-meta {
+                gap: 10px;
+            }
+
+            .meta-item {
+                width: 100%;
+                align-items: flex-start;
+                border-radius: 14px;
+            }
+
+            .details-container {
+                padding-top: 34px;
+            }
+
+            .speaker-main-card {
+                padding: 26px 18px;
+            }
+
+            .section-box-header {
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .webinar-hero h1 {
+                font-size: 1.48rem;
+            }
+        }
+    </style>
+  <script src="js/site-animations.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Menu-start-area -->
+    <header style="margin-bottom: 0;">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="brand-logo">
+                            <img src="images/seapheinlogo@3x.png" alt="SEAPHEIN">
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="top-socail">
+                            <ul>
+                                <li><a class="country-flag" href="mebmerinstutions.html#bangladesh" aria-label="View Bangladesh member institutions"><img src="images/newflag-01.png" alt=""></a></li>
+                                <li><a class="country-flag" href="mebmerinstutions.html#bhutan" aria-label="View Bhutan member institutions"><img src="images/newflag-02.png" alt=""></a></li>
+                                <li><a class="country-flag" href="mebmerinstutions.html#india" aria-label="View India member institutions"><img src="images/newflag-03.png" alt="" style=" width: 40px;"></a></li>
+                                <li><a class="country-flag" href="mebmerinstutions.html#myanmar" aria-label="View Myanmar member institutions"><img src="images/newflag-04.png" alt=""></a></li>
+                                <li><a class="country-flag" href="mebmerinstutions.html#nepal" aria-label="View Nepal member institutions"><img src="images/newflag-05.png" alt=""></a></li>
+                                <li><a class="country-flag" href="mebmerinstutions.html#sri-lanka" aria-label="View Sri Lanka member institutions"><img src="images/newflag-06.png" alt=""></a></li>
+                                <li><a class="country-flag" href="mebmerinstutions.html#thailand" aria-label="View Thailand member institutions"><img src="images/newflag-07.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-fixed header-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="collapse navbar-collapse my-lg-0" id="navbarNav">
+                                <ul class="navbar-nav mr-auto text-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="about-us.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link scroll" href="events.html">Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="collaborationmembers.html">Collaborations</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="leadershipaward.html">Awards</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="leadership-team.html">Team</a>
+                                        <ul class="dropdown">
+                                            <li class="nav-item"><a class="nav-link scroll"
+                                                    href="leadership-team.html">Leadership Team</a></li>
+                                            <li class="nav-item"><a class="nav-link scroll"
+                                                    href="committeemembers.html">Executive Team</a></li>
+                                            <li class="nav-item"><a class="nav-link scroll"
+                                                    href="mebmerinstutions.html">Member Institution</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="gallery.html">Gallery</a>
+                                    </li>
+                           <li class="nav-item">
+
+                              <a class="nav-link scroll" href="membership.html">Membership</a>
+
+                           </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link scroll" href="contact-us.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="webinar-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="badge-role webinar-series-badge">SEAPHEIN
+                        Webinar Series #3</span>
+                    <h1>Implementation Research in Public Health: From Capacity Building to Impact</h1>
+                    <div class="hero-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Friday, June 12, 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>5:30 - 6:30 PM (IST)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="details-container container pb-5">
+        <!-- Banner Image Section -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="webinar-image-container wow fadeInUp">
+                    <img src="images/webinar3.webp" alt="Webinar Banner - Implementation Research in Public Health">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Resource Persons Section -->
+            <div class="col-12 mb-5">
+                <div class="speaker-main-card">
+                    <div class="section-box-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Resource Persons</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="person-card">
+                                <span class="role-badge">Speaker</span>
+                                <div class="person-name">Prof. S.D. Gupta</div>
+                                <p class="person-title">President, SEAPHEIN & President, IIHMR</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="person-card">
+                                <span class="role-badge">Speaker</span>
+                                <div class="person-name">Dr. Mahnaz Vahedi</div>
+                                <p class="person-title">Scientist, Research Capacity Strengthening, TDR, the Special Programme for Research & Training in Tropical Diseases, World Health Organization</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="person-card">
+                                <span class="role-badge">Speaker</span>
+                                <div class="person-name">Dr. P. R. Sodani</div>
+                                <p class="person-title">Secretary-General, SEAPHEIN & President, IIHMR University</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="person-card">
+                                <span class="role-badge">Moderator</span>
+                                <div class="person-name">Dr. Vinod Kumar SV</div>
+                                <p class="person-title">Dean In Charge, SD Gupta School of Public Health, IIHMR University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Link -->
+            <div class="col-12">
+                <a href="webinars.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Webinars
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="same-section-spacing footer-bg mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-4">
+                    <div class="footer-about">
+                        <img src="images/seapheinlogo White@3x.png" alt="SEAPHEIN">
+                        <p>South-East Asia Public Health Education Institution Network (SEAPHEIN) was created by the WHO
+                            South-East Asia Regional Office to establish a knowledge-sharing base among the member
+                            countries of the region centered around public health education and training.</p>
+                    </div>
+                </div>
+              
+                <div class="col-lg-3 col-md-4">
+                    <div class="usefull-links">
+                        <h4 class="footer-title">Useful Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="contact-us">
+                        <h4 class="footer-title">Contact Us</h4>
+                        <p><b>SEAPHEIN Secretariat, </b><br>IIHMR UNIVERSITY, <br> 1, Prabhu Dayal Marg,<br> Sanganer
+                            Airport, Jaipur - 302029<br>Rajasthan, INDIA </p>
+                        <p><i class="fa fa-envelope"></i> seapheinsecretariat@iihmr.edu.in</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-141 3924700</p>
+                        <ul class="social-icons">
+                            <li>Follow Us :</li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="copy-right">
+                <span class="copy-right-seprater"></span>
+                <p>Copy Right 2026 . All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="btn-to-top"><i class="fas fa-arrow-up"></i></a>
+    <script src="js/jquery.1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
